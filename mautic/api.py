@@ -187,7 +187,7 @@ class API(object):
         :return: dict|str
         """
         response = self._client.session.post(
-            '{url}/new'.format(url=self.endpoint_url), data=parameters
+            '{url}/new'.format(url=self.endpoint_url), json=parameters
         )
         return self.process_response(response)
 
